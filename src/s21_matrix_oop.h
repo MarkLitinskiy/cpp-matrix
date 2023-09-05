@@ -2,10 +2,6 @@
 #define S21_MATRIX_OOP
 
 class S21Matrix {
- private:
-  const double kzero = 1e-9;
-  int rows_, cols_;  // Строки и колонки
-  double** matrix_;  // Указатель, где в памяти расположена матрица
 
  public:
   S21Matrix() noexcept;  // Default constructor
@@ -52,6 +48,10 @@ class S21Matrix {
   void PrintMatrix() const noexcept;
 
  private:
+  const double kzero = 1e-9;
+  int rows_, cols_;  // Строки и колонки
+  double** matrix_;  // Указатель, где в памяти расположена матрица
+
   // вспомогательные методы для работы с матрицами
   void CopyMatrixData(const S21Matrix& other) noexcept;
   void CheckMatrix(const S21Matrix& other) const;
